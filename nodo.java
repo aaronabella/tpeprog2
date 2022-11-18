@@ -1,30 +1,30 @@
 public class nodo {
-    private Object object;
+    private Object info;
     private nodo nodoSiguiente;
-    private nodo nodoAnterior;
 
-    public Object getObject(){
-        return object;
-    }
-    public void setObject(Object object){
-        this.object = object;
+    public Object getObject() {
+        return info;
     }
 
-    public nodo getSiguienteNodo(){
+    public void setObject(Object info) {
+        this.info = info;
+    }
+
+    public nodo getSiguienteNodo() {
         return nodoSiguiente;
     }
 
-    public void setSiguienteNdodo(nodo nodoSiguiente){
+    public void setSiguienteNodo(nodo nodoSiguiente) {
         this.nodoSiguiente = nodoSiguiente;
     }
 
-    public void unirSiguiente(nodo nodo){
+    public void unirSiguiente(nodo nodo) {
         nodoSiguiente = nodo;
     }
-    
-    public nodo(Object object){
-        this.object = object;
-        this.nodoSiguiente = null;
+
+    public nodo(Object info, nodo n) {
+        setObject(info);
+        setSiguienteNodo(n);
     }
-        
+
 }

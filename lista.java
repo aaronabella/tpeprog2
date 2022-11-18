@@ -1,31 +1,53 @@
-package tpe;
+package tpeprog2;
 
-import tpe.alumno;
+import java.util.Comparator;
+import java.util.Iterator;
 
 public class lista {
     private nodo primero;
+    private Comparator comp;
+    private int tamanio;
 
-    public lista(){
-        primero = null;
+    public lista(nodo primero, Comparator<Object> comp, int tamanio) {
+        this.primero = null;
+        this.comp = comp;
+        this.tamanio = tamanio;
     }
 
+    public void setComparador(Comparator<Object> comp) {
+        this.comp = comp;
+    }
 
-    public boolean isEmpty(){
-        if (primero == null){
-          return true;  
-        }
-        else{return false;}
-    }
-    public void agregarAlumno(alumno nuevoAlumno){
-        if((nuevoAlumno !=null)&& (!lista.contains(nuevoAlumno))){
-            insertar(nuevoAlumno);
+    public boolean isEmpty() {
+        if (primero == null) {
+            return true;
+        } else {
+            return false;
         }
     }
-    
-    private void insertarOrdenado(alumno nuevAlumno){
-        int i = 0;
-        while((i< alumnos.size())&& (alumnos.get(i).compareTo(nuevAlumno) < 0)){
-            i++;
+
+    public void agregarAlumno(alumno nuevoAlumno) {
+        if ((nuevoAlumno != null) && (!lista.contains(nuevoAlumno))) {
+            insert(nuevoAlumno);
         }
-    }   alumnos.add(i, nuevoAlumno);
+    }
+
+    public void insert(Object o) {
+        nodo temp = new nodo(o, null);
+        temp.setSiguienteNodo(primero);
+        primero = temp;
+    }
+
+    public void borrarPrimero(){
+        if(this.isEmpty()){
+            return;
+        }
+        else{
+            primero = primero.getSiguienteNodo()
+        }
+    }
+
+    public void borrarNodo(int posicion){
+        if(this.isEmpty())
+    }
 }

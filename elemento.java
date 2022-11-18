@@ -1,4 +1,4 @@
-package tpe;
+package tpeprog2;
 
 public abstract class elemento {
     private String nombre;
@@ -10,5 +10,6 @@ public abstract class elemento {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public abstract int getAlumnosTotal();s
+
+    public abstract int getAlumnosTotal();
 }
