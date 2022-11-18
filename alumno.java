@@ -43,5 +43,10 @@ public class alumno extends elemento{
 		this.edad = edad;
         intereses = new ArrayList<>();
     }
+
+    @Override
+    public int getAlumnosTotal(){
+        return 1;
+    }
     
 }
