@@ -57,8 +57,5 @@ public class lista implements Iterable<Object> {
         return new iterarNodos();
     }
 
-    private class iterarNodos implements Iterator<>Object{
-        private int nodoSiguiente;
-
-    }
+    
 }
