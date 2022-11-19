@@ -2,8 +2,9 @@ package tpeprog2;
 
 import java.util.Comparator;
 import java.util.Iterator;
+import java.util.function.Function;
 
-public class lista {
+public class lista implements Iterable<Object> {
     private nodo primero;
     private Comparator comp;
     private int tamanio;
@@ -49,5 +50,15 @@ public class lista {
 
     public void borrarNodo(int posicion){
         if(this.isEmpty())
+    }
+
+    @Override
+    public Iterator<Object> iterator() {
+        return new iterarNodos();
+    }
+
+    private class iterarNodos implements Iterator<>Object{
+        private int nodoSiguiente;
+
     }
 }
